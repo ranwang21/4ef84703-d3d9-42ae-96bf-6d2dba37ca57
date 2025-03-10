@@ -1,0 +1,313 @@
+/* Header Component */
+.header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  background-color: white;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin: 0;
+  transition: transform var(--transition-speed);
+  will-change: transform;
+}
+
+.header:hover h1 {
+  transform: scale(1.05);
+}
+
+/* Footer Component */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 0;
+  background-color: white;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.footer-icon {
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  transition: color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+  will-change: color, transform;
+}
+
+.footer-icon:hover,
+.footer-icon.active {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* CallItem Component */
+.call-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+  animation: slideIn 0.3s ease-out forwards;
+  opacity: 0;
+  will-change: transform, background-color, opacity;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.call-item:hover {
+  background-color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.call-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  color: white;
+  transition: transform var(--transition-speed) ease;
+  will-change: transform;
+}
+
+.call-item:hover .call-icon {
+  transform: scale(1.1);
+}
+
+.inbound {
+  background-color: var(--inbound-color);
+}
+
+.outbound {
+  background-color: var(--outbound-color);
+}
+
+.missed {
+  background-color: var(--missed-color);
+}
+
+.answered {
+  background-color: var(--answered-color);
+}
+
+.voicemail {
+  background-color: var(--voicemail-color);
+}
+
+.call-info {
+  flex: 1;
+}
+
+.call-number {
+  font-weight: 500;
+  margin-bottom: 5px;
+  transition: color var(--transition-speed) ease;
+  will-change: color;
+}
+
+.call-item:hover .call-number {
+  color: var(--primary-color);
+}
+
+.call-details {
+  display: flex;
+  font-size: 12px;
+  color: #888;
+  flex-wrap: wrap;
+}
+
+.call-time {
+  margin-right: 10px;
+}
+
+.call-via {
+  margin-right: 10px;
+}
+
+.call-duration {
+  margin-right: 10px;
+}
+
+.call-actions {
+  display: flex;
+  align-items: center;
+}
+
+.archive-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  transition: color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+  padding: 8px;
+  will-change: color, transform;
+}
+
+.archive-button:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+/* ActivityDetail Component */
+.activity-detail {
+  padding: 20px;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  transition: transform var(--transition-speed) ease;
+  will-change: transform;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+}
+
+.detail-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+  animation: scaleIn 0.3s ease-out forwards;
+  will-change: transform, box-shadow;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.detail-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  color: white;
+  font-size: 20px;
+  transition: transform var(--transition-speed) ease;
+  will-change: transform;
+}
+
+.detail-card:hover .detail-icon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.detail-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.detail-item {
+  display: flex;
+  margin-bottom: 15px;
+  transition: transform var(--transition-speed) ease;
+  will-change: transform;
+}
+
+.detail-item:hover {
+  transform: translateX(5px);
+}
+
+.detail-label {
+  width: 120px;
+  color: #888;
+}
+
+.detail-value {
+  flex: 1;
+  font-weight: 500;
+}
+
+.detail-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ActivityFeed and Archive Components */
+.activity-feed,
+.archive {
+  padding-bottom: 20px;
+}
+
+/* Apply animation delay to call items for staggered effect */
+.call-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.call-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.call-item:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.call-item:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.call-item:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.call-item:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.call-item:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.call-item:nth-child(8) {
+  animation-delay: 0.4s;
+}
+.call-item:nth-child(9) {
+  animation-delay: 0.45s;
+}
+.call-item:nth-child(10) {
+  animation-delay: 0.5s;
+}
